@@ -2,6 +2,7 @@ package com.example.homeworkweek05d1.Service;
 
 import com.example.homeworkweek05d1.Api.ApiException;
 import com.example.homeworkweek05d1.Model.Address;
+import com.example.homeworkweek05d1.Model.Course;
 import com.example.homeworkweek05d1.Model.Teacher;
 import com.example.homeworkweek05d1.Repository.AddressRepository;
 import com.example.homeworkweek05d1.Repository.TeacherRepository;
@@ -10,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -34,7 +36,7 @@ public class TeacherService {
     }
 
     public Teacher add(TeacherDTO teacherDTO) {
-        Teacher teacher = new Teacher(null, teacherDTO.getName(), teacherDTO.getAge(), teacherDTO.getEmail(), teacherDTO.getSalary(), null);
+        Teacher teacher = new Teacher(null, teacherDTO.getName(), teacherDTO.getAge(), teacherDTO.getEmail(), teacherDTO.getSalary(), null, null);
 
         return teacherRepository.save(teacher);
     }
