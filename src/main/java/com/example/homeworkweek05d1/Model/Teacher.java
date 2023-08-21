@@ -30,7 +30,7 @@ public class Teacher {
     private Double salary;
 
     // relation
-    @OneToOne(cascade = CascadeType.DETACH)
+    @OneToOne(cascade = CascadeType.DETACH, mappedBy = "teacher")
     @PrimaryKeyJoinColumn
     private Address address;
 
